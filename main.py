@@ -24,8 +24,8 @@ def main(token):
         json={},
     )
 
-    if response.status_code == 204:
-        print(f"Friend Request was sent successfully with token: {token}")
+   if response.status_code == 204:
+    print("\033[32m" + f"Friend Request was sent successfully with token: {token}" + "\033[0m")
     else:
         error_message = response.json().get('message', 'Unknown error occurred')
         print(f"Error with token {token}: {error_message}")
